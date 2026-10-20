@@ -1,5 +1,19 @@
 import Reveal from './Reveal'
 import SectionWrapper from './SectionWrapper'
+import ImageRotator from './ImageRotator'
+
+const images = [
+  {
+    src: '/images/eyehospital1.jpeg',
+    alt: 'The Eye Specialist Hospital, Nsukka — exterior view of the solar-powered, climate-responsive building',
+    fit: 'cover' as const,
+  },
+  {
+    src: '/images/eyehospital2.jpeg',
+    alt: 'The Eye Specialist Hospital, Nsukka — before and after comparison of the building',
+    fit: 'contain' as const,
+  },
+]
 
 const approach = [
   {
@@ -20,12 +34,7 @@ export default function SignatureWork() {
   return (
     <SectionWrapper id="work">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div
-          aria-hidden
-          className="flex aspect-[4/5] w-full items-end bg-ink/5 p-4 text-sm text-ink/60"
-        >
-          Placeholder: photograph of The Eye Specialist Hospital, Nsukka
-        </div>
+        <ImageRotator images={images} sizes="(max-width: 1024px) 100vw, 50vw" />
         <div>
           <Reveal>
             <h2 className="font-serif text-4xl leading-tight md:text-5xl">

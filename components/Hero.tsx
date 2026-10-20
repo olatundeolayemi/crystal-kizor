@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import LightWell from './LightWell'
 import SectionWrapper from './SectionWrapper'
@@ -38,9 +39,15 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          {/* hidden below lg until a portrait exists */}
-          <div aria-hidden className="hidden aspect-[4/5] w-full items-end bg-ink/5 p-4 text-sm text-ink/60 lg:flex">
-            Placeholder: portrait of Crystal Kizor
+          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden bg-ink/5 lg:max-w-none">
+            <Image
+              src="/images/coza.png"
+              alt="Portrait of Crystal Kizor, architect and founder of Studio COKA"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </SectionWrapper>

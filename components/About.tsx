@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Reveal from './Reveal'
 import SectionWrapper from './SectionWrapper'
 
@@ -5,11 +6,14 @@ export default function About() {
   return (
     <SectionWrapper id="about">
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
-        <div
-          aria-hidden
-          className="flex aspect-[4/5] w-full max-w-sm items-end bg-ink/5 p-4 text-sm text-ink/60 lg:max-w-none"
-        >
-          Placeholder: portrait of Crystal Kizor
+        <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden bg-ink/5 lg:max-w-none">
+          <Image
+            src="/images/Portrait.png"
+            alt="Portrait of Crystal Kizor"
+            fill
+            sizes="(max-width: 1024px) 100vw, 40vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <Reveal>
