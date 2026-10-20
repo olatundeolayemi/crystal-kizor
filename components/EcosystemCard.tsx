@@ -1,3 +1,7 @@
+'use client'
+
+import { motion, useReducedMotion } from 'framer-motion'
+
 type Props = {
   title: string
   description: string
@@ -28,12 +32,15 @@ const tierStyles = {
 } as const
 
 export default function EcosystemCard({ title, description, label, href, tier }: Props) {
+  const reduce = useReducedMotion()
   const s = tierStyles[tier]
   const external = href.startsWith('http')
   return (
-    <a
+    <motion.a
       href={href}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      whileHover={reduce ? undefined : { y: -4, boxShadow: '0 18px 36px -14px rgba(26,26,26,0.3)' }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
       className={`flex flex-col justify-between gap-10 ${s.card}`}
     >
       <div>
@@ -41,6 +48,6 @@ export default function EcosystemCard({ title, description, label, href, tier }:
         <p className={`mt-4 max-w-md leading-relaxed ${s.description}`}>{description}</p>
       </div>
       <span className={`font-medium underline decoration-2 underline-offset-4 ${s.label}`}>{label}</span>
-    </a>
+    </motion.a>
   )
 }

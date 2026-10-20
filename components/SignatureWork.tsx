@@ -1,3 +1,4 @@
+import Reveal from './Reveal'
 import SectionWrapper from './SectionWrapper'
 
 export default function SignatureWork() {
@@ -6,11 +7,15 @@ export default function SignatureWork() {
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div aria-hidden className="aspect-[4/5] w-full bg-ink/5" />
         <div>
-          <h2 className="font-serif text-4xl leading-tight md:text-5xl">[COPY: signature work heading]</h2>
-          <p className="mt-6 text-lg leading-relaxed text-ink/80">
-            [COPY: introduce The Eye Specialist Hospital, Nsukka, Nigeria&apos;s first fully off-grid solar-powered
-            hospital]
-          </p>
+          <Reveal>
+            <h2 className="font-serif text-4xl leading-tight md:text-5xl">[COPY: signature work heading]</h2>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <p className="mt-6 text-lg leading-relaxed text-ink/80">
+              [COPY: introduce The Eye Specialist Hospital, Nsukka, Nigeria&apos;s first fully off-grid solar-powered
+              hospital]
+            </p>
+          </Reveal>
           <ul className="mt-10 border-t border-ink/15">
             {['passive cooling', 'natural light', 'local materials'].map((topic) => (
               <li key={topic} className="flex items-start gap-4 border-b border-ink/15 py-5">

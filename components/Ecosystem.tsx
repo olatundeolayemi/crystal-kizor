@@ -1,12 +1,17 @@
 import { brandLinks } from '@/lib/brands'
 import EcosystemCard from './EcosystemCard'
+import Reveal from './Reveal'
 import SectionWrapper from './SectionWrapper'
 
 export default function Ecosystem() {
   return (
     <SectionWrapper id="ecosystem">
-      <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl">[COPY: ecosystem section heading]</h2>
-      <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/80">[COPY: one line on how the brands connect]</p>
+      <Reveal>
+        <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl">[COPY: ecosystem section heading]</h2>
+      </Reveal>
+      <Reveal delay={0.12}>
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/80">[COPY: one line on how the brands connect]</p>
+      </Reveal>
 
       <div className="mt-16 grid gap-6 md:grid-cols-2">
         <EcosystemCard

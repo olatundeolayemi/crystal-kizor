@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { brandLinks } from '@/lib/brands'
+import Reveal from './Reveal'
 import SectionWrapper from './SectionWrapper'
 
 const steps = [
@@ -15,7 +16,9 @@ const buttonClass =
 export default function NextSteps() {
   return (
     <SectionWrapper id="next">
-      <h2 className="font-serif text-4xl leading-tight md:text-5xl">[COPY: next steps heading]</h2>
+      <Reveal>
+        <h2 className="font-serif text-4xl leading-tight md:text-5xl">[COPY: next steps heading]</h2>
+      </Reveal>
       <div className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
         {steps.map((s) =>
           s.href.startsWith('/') ? (
