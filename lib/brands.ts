@@ -3,7 +3,7 @@ export const brandLinks = {
   coka: 'https://studiocoka.com',
   tea: '#',
   elevated: '#',
-  speaking: '#',
+  speaking: '/contact',
   ako: '#',
   alive: '#',
   crystal: '#',

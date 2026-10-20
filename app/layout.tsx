@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 
 export const metadata: Metadata = {
   title: 'Crystal Kizor',
-  description: '[COPY: meta description]',
+  description:
+    'Crystal Kizor is an architect, designer, entrepreneur and speaker, founder of Studio COKA, building across architecture, furniture, education, research and youth work.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,7 +3,7 @@ import LightWell from './LightWell'
 import SectionWrapper from './SectionWrapper'
 
 const headlineClass = 'font-serif text-[clamp(2.5rem,6.5vw,5.5rem)] leading-[1.04] tracking-tight'
-const lines = ['[COPY: headline, line 1]', '[COPY: headline, line 2]']
+const lines = ['Architect and designer,', 'builder of climate-responsive futures.']
 
 export default function Hero() {
   return (
@@ -20,7 +20,8 @@ export default function Hero() {
               ))}
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/80 md:text-xl">
-              [COPY: one-sentence positioning for Crystal Kizor, founder of Studio COKA]
+              Crystal Kizor is the founder of Studio COKA and builds across architecture, furniture, education,
+              speaking, research and youth work.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
@@ -38,7 +39,9 @@ export default function Hero() {
             </div>
           </div>
           {/* hidden below lg until a portrait exists */}
-          <div aria-hidden className="hidden aspect-[4/5] w-full bg-ink/5 lg:block" />
+          <div aria-hidden className="hidden aspect-[4/5] w-full items-end bg-ink/5 p-4 text-sm text-ink/60 lg:flex">
+            Placeholder: portrait of Crystal Kizor
+          </div>
         </div>
       </SectionWrapper>
     </div>

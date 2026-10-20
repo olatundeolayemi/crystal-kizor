@@ -17,7 +17,7 @@ export default function NextSteps() {
   return (
     <SectionWrapper id="next">
       <Reveal>
-        <h2 className="font-serif text-4xl leading-tight md:text-5xl">[COPY: next steps heading]</h2>
+        <h2 className="font-serif text-4xl leading-tight md:text-5xl">Where would you like to start?</h2>
       </Reveal>
       <div className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
         {steps.map((s) =>
