@@ -6,7 +6,7 @@ import SignatureWork from '@/components/SignatureWork'
 
 export default function Page() {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Ecosystem />
       <SignatureWork />

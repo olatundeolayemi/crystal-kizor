@@ -47,7 +47,10 @@ export default function EcosystemCard({ title, description, label, href, tier }:
         <h3 className={`font-serif leading-tight ${s.title}`}>{title}</h3>
         <p className={`mt-4 max-w-md leading-relaxed ${s.description}`}>{description}</p>
       </div>
-      <span className={`font-medium underline decoration-2 underline-offset-4 ${s.label}`}>{label}</span>
+      <span className={`font-medium underline decoration-2 underline-offset-4 ${s.label}`}>
+        {label}
+        {external && <span className="sr-only"> (opens in a new tab)</span>}
+      </span>
     </motion.a>
   )
 }

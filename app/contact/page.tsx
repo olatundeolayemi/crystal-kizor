@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'Start a project | Crystal Kizor' }
 
 export default function ContactPage() {
   return (
-    <main>
+    <main id="main">
       <SectionWrapper>
         <Link href="/" className="font-medium underline decoration-accent decoration-2 underline-offset-4">
           Back to home

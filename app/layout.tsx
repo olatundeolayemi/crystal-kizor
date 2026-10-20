@@ -13,7 +13,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="bg-cream font-sans text-ink antialiased">{children}</body>
+      <body className="bg-cream font-sans text-ink antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-ink focus:px-4 focus:py-2 focus:text-cream"
+        >
+          Skip to content
+        </a>
+        {children}
+      </body>
     </html>
   )
 }
