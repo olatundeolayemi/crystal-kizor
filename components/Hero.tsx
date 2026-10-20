@@ -1,15 +1,23 @@
 import Link from 'next/link'
+import LightWell from './LightWell'
 import SectionWrapper from './SectionWrapper'
+
+const headlineClass = 'font-serif text-[clamp(2.5rem,6.5vw,5.5rem)] leading-[1.04] tracking-tight'
+const lines = ['[COPY: headline, line 1]', '[COPY: headline, line 2]']
 
 export default function Hero() {
   return (
     <div className="relative isolate overflow-hidden">
+      <LightWell lines={lines} headlineClass={headlineClass} />
       <SectionWrapper className="relative z-10 flex min-h-[100svh] items-center">
         <div className="grid items-center gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <h1 className="font-serif text-[clamp(2.5rem,6.5vw,5.5rem)] leading-[1.04] tracking-tight">
-              <span className="block">[COPY: headline, line 1]</span>
-              <span className="block">[COPY: headline, line 2]</span>
+            <h1 className={headlineClass}>
+              {lines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/80 md:text-xl">
               [COPY: one-sentence positioning for Crystal Kizor, founder of Studio COKA]
